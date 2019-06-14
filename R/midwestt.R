@@ -13,7 +13,7 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-midwestt <- function(){
+midwestt <- function(input=5){
   library(ggplot2)
   library(plotly)
   gg<-ggplot(midwest, aes(x=area, y=poptotal)) + geom_point()
