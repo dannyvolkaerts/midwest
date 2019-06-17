@@ -16,10 +16,10 @@
 midwestt <- function(input=5){
   library(ggplot2)
   library(plotly)
-  ggplot(midwest, aes(x=area, y=poptotal)) + geom_point()
+  gg<-ggplot(midwest, aes(x=area, y=poptotal)) + geom_point()
   #return(ggplotly(gg))
 
-  htmlwidgets::saveWidget(widgetframe::frameableWidget(ggp),'ggplotly_plot_selfcontained.html', selfcontained = TRUE)
+  htmlwidgets::saveWidget(widgetframe::frameableWidget(gg),'ggplotly_plot_selfcontained.html', selfcontained = TRUE)
   #rawhtml <- readBin('ggplotly_plot_selfcontained.html', raw(), file.info('ggplotly_plot_selfcontained.html')$size)
   #return(rawhtml)
 }
